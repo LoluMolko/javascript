@@ -1,0 +1,23 @@
+<html>
+ <head>
+ </head>
+ <body>
+   <input class='text_field' type='text' id ='name'/><br>
+   <input class='text_field' type='text' id ='surname'/><br>
+   <input type='number_field' id ='age'/><br>
+   <button onclick='findLongestValue()'>Find longest</button>
+   <p id='text'></p>
+   <script type='text/javascript'>
+      function findLongestValue(){
+        var inputs = document.querySelectorAll('input')
+        var result = '';
+        for (var i = 0; i <= inputs.length -1; i++){
+          if (inputs[i].value.length > result.length){
+            result = inputs[i].value
+          }
+        }
+        document.getElementById('text').innerHTML = 'The longest input is as follows: ' + result;
+      }
+   </script>
+ </body>
+</html>
